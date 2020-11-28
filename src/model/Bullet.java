@@ -2,8 +2,8 @@ package model;
 
 import processing.core.PApplet;
 
-public class Bullet {
-	
+public class Bullet implements Runnable {
+
 	private int posX, posY, size, speed;
 	private PApplet app;
 
@@ -11,19 +11,29 @@ public class Bullet {
 		this.app = app;
 		this.posX = posX;
 		this.posY = posY;
-		this.size = size;
-		this.speed = speed;
-		
+		this.size = 10;
+		this.speed = 5;
+
 	}
-	
+
 	public void drawBullet() {
-		
-		
+		app.noStroke();
+		app.fill(208, 85, 244);
+		app.ellipse(posX, posY, size, size);
+
 	}
-	
-	public void move() {
-		
-		
+
+	public void movement() {
+
+		posY -= speed;
+
+	}
+
+	@Override
+	public void run() {
+
+		movement();
+
 	}
 
 	public int getPosX() {

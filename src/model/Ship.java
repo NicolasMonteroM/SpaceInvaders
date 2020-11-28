@@ -3,25 +3,25 @@ package model;
 import processing.core.PApplet;
 
 public abstract class Ship {
-	
-	private int posX, posY, size, speed;
-	private PApplet app;
+
+	protected int posX, posY, size, speed;
+	protected PApplet app;
 
 	public Ship(PApplet app, int posX, int posY, int size, int speed) {
-		this.app = app;
+		this.setApp(app);
 		this.posX = posX;
 		this.posY = posY;
 		this.size = size;
 		this.speed = speed;
-		
+
 	}
-	
+
 	public void drawShip() {
-		
+
 	}
-	
+
 	public void movement() {
-		
+
 	}
 
 	public int getPosX() {
