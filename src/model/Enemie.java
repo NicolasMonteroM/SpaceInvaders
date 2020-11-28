@@ -5,7 +5,7 @@ import processing.core.PApplet;
 public class Enemie extends Ship implements Runnable {
 
 	public Enemie(PApplet app, int posX, int posY, int size, int speed) {
-		super(app, posX, posY, 15, 3);
+		super(app, posX, posY, 15, 4);
 
 	}
 

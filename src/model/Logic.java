@@ -136,6 +136,9 @@ public class Logic {
 		lost = false;
 		won = false;
 		gameOver = false;
+		
+		enemies.clear();
+		bullets.clear();
 
 		startGame();
 
